@@ -11,7 +11,7 @@ $factory->define(App\Band::class, function (Faker $faker) {
         'metal'
     ];
     return [
-        'name' => $faker->name,
+        'name' => ucwords($faker->words(2, true)),
         'description' => $faker->text(),
         'genre' => $genre[mt_rand(0, 3)]
     ];

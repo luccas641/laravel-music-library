@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Band;
 use Illuminate\Http\Request;
-use App\Requests\StoreBand;
+use App\Http\Requests\StoreBand;
 
 class BandController extends Controller
 {
@@ -73,6 +73,7 @@ class BandController extends Controller
     public function update(StoreBand $request, Band $band)
     {
         $band->fill($request->all());
+        $band->save();
         return redirect('/bands');
     }
 

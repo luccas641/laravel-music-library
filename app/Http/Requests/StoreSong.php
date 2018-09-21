@@ -13,7 +13,7 @@ class StoreSong extends FormRequest
      */
     public function authorize()
     {
-        return Auth::user()->inLevel(2);
+        return true; //TODO
     }
 
     /**
@@ -24,10 +24,10 @@ class StoreSong extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required|max:255',
-            'title' => 'required|max:255',
-            'title' => 'required|max:255',
-            'title' => 'required|max:255',
+            'name' => 'required|max:255',
+            'duration' => 'required|integer',
+            'composer' => 'required|max:255',
+            'order' => 'required|integer',
         ];
     }
 }

@@ -9,7 +9,7 @@
 
                 <div class="card-body">
                     @foreach($bands as $band)
-                        <p>This is user {{ $band->name }}</p>
+                        <p>{{ $band->name }}</p>
                     @endforeach
                 </div>
             </div>
